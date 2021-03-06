@@ -1,12 +1,4 @@
-//here we need to do something mysterious with the actual 
-//user input (number of chars, yes/no options) 
-// const __________ = document.getElementById();
 
-// generate.addEventListener("click", () => {
-//     const length = lengthEl.value
-
-//     console.log(lenght);
-// });
 
 //put results from randoLower/Upper/Number/Special functions into objects 
 const userSelectionsFunc = {
