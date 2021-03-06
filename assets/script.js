@@ -12,18 +12,55 @@
 // WHEN all prompts are answered
 // THEN a password is generated that matches the selected criteria
 // WHEN the password is generated
-// THEN the password is either displayed in an alert or written to the page// Assignment Code
-// var generateBtn = document.querySelector("#generate");
+// THEN the password is either displayed in an alert or written to the page
+
+
+//Assignment Code 
+
+//establishing that variable "generateBtn" points to document (linked html)
+//and finds (via querySelctor) the element with id #generate. 
+var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-    var password = generatePassword();
-    var passwordText = document.querySelector("#password");
+
+  //*****Please note that result is a string. That means you should 
+  //sometimes cast the value given by the user. For example, if 
+  //their answer should be a Number, you should cast the value to Number*****
+  //reference: https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt
+  const aNumber = Number(window.prompt("Type a number", ""));
+  var howLong = window.prompt("how many characters long?");
+  alert(howLong);
+
+
+  var password = generatePassword();
+}
+
+// //provides a list of special characters rather than 
+   function getRandomSymbol() {
+    var symbol = "!@#$%^&*(){}[]=<>/,.|~?";
+      return symbol[Math.floor(Math.random() * symbol.length)];
+   }
+
+    function getRandomUpperCase() {
+      return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+    }
+
+    function getRandomLowerCase() {
+      return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+    }
+
+    function getRandomNumber(){
+      return String.fromCharCode(Math.floor(Math.random()*10)+48);
+   }
   
-    passwordText.value = password;
-  
-  }
-  
-  // Add event listener to generate button
-  generateBtn.addEventListener("click", writePassword);
-  
+
+//   //references element id #password in linked html doc--textfield where 
+//   //generated password will be displayed 
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+
+// }
+
+// Add event listener to generate button
