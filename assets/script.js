@@ -42,7 +42,7 @@ var wantLength = parseInt(prompt("enter password length (8-128 characters)"), 10
 //isNaN solution found at https://stackoverflow.com/questions/15047140/javascript-prompt
 //-number-and-continue-prompting-if-answer-is-wrong
 while (isNaN(wantLength) || wantLength < 8 || wantLength > 128) {
-  wantLength = prompt("length must be between 12 and 128, please re-enter a valid length.");
+  wantLength = prompt("length must be between 8 and 128, please re-enter a valid length.");
 }
 //the rest of the character type options record ok/cancel as true/false booleans 
 var wantLower = window.confirm("include lowercase letters?");
