@@ -46,14 +46,16 @@ function doPassword() {
     var wantUpper = window.confirm("include uppercase letters?");
     var wantNumber = window.confirm("include numbers?");
     var wantSpecial = window.confirm("include special characters?");
+
     // variable any_selected = a true boolean in at least one of each of the variables 
     // assigned at the top of the do loop. 
     var any_selected = wantLower || wantUpper || wantNumber || wantSpecial;
+
     //if the there are no positive values in any_selected, the user is alerted that they need to choose at least one
     if (!any_selected) {
       alert("at least one type must be selected");
     }
-    //re-calls the selection windows 
+    //re-calls the type selection windows 
   } while (!any_selected)
 
   //once type selection do loop finishes with at least one true, this checks variables 
@@ -94,3 +96,4 @@ function doPassword() {
   document.getElementById("password").value = password;
 
 }
+
