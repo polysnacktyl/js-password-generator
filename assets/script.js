@@ -1,11 +1,6 @@
 
-
+//when user presses "Generate Password" button, this is the function it calls. 
 function doPassword() { 
-
-//we must start everything off via button-click
-                //add event listener
-                // on click run, y'know, all of this 
-
 
 // random decimal(math.random), rounded down(math.floor), multiplied by number of letters 
 //in alphabet (*26) plus the start point of lowercase letters in browser character code
@@ -95,11 +90,10 @@ for (var i = 0; i < wantLength; i++) {
 password = password.split('').sort(function(){return 0.5-Math.random()}).join(''); 
 console.log(password);
 
-// document.getElementById("password").value = "";
 
-
-              //THEN WRITE VAR PASSWORD INTO TEXTFIELD ID "password"
-
+//                          ✨ voila! ✨
+//writes var password into text field id="password" in html page. 
+document.getElementById("password").value = password;
 
 }
 
