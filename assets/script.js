@@ -25,7 +25,7 @@ function doPassword() {
   }
 
 
-  //here we invoke the pop-up input/ok/cancel box on the page prompting user for input on 
+  //this calls the pop-up input/ok/cancel box on the page prompting user for input on 
   //length and character types to use. these answers will be stored in memory, but not displayed. 
   //parseInt solution found at https://stackoverflow.com/a/15047174
   var wantLength = parseInt(prompt("enter password length (8-128 characters)"), 10);
@@ -38,15 +38,26 @@ function doPassword() {
   while (isNaN(wantLength) || wantLength < 8 || wantLength > 128) {
     wantLength = prompt("length must be between 8 and 128, please re-enter a valid length.");
   }
-  //the rest of the character type options record ok/cancel as true/false booleans 
-  var wantLower = window.confirm("include lowercase letters?");
-  var wantUpper = window.confirm("include uppercase letters?");
-  var wantNumber = window.confirm("include numbers?");
-  var wantSpecial = window.confirm("include special characters?");
 
+  //this do loop runs window.confirm sequence in which user specifies character types to 
+  //include in the pw. 
+  do {
+    var wantLower = window.confirm("include lowercase letters?");
+    var wantUpper = window.confirm("include uppercase letters?");
+    var wantNumber = window.confirm("include numbers?");
+    var wantSpecial = window.confirm("include special characters?");
+    // variable any_selected = a true boolean in at least one of each of the variables 
+    // assigned at the top of the do loop. 
+    var any_selected = wantLower || wantUpper || wantNumber || wantSpecial;
+    //if the there are no positive values in any_selected, the user is alerted that they need to choose at least one
+    if (!any_selected) {
+      alert("at least one type must be selected");
+    }
+    //re-calls the selection windows 
+  } while (!any_selected)
 
-  //checks wantLower/Upper/Number/Special boolean values and adds true values 
-  //to an array which will iterate *wantLength number* times. 
+  //once type selection do loop finishes with at least one true, this checks variables 
+  //wantLower/Upper/Number/Special sorts the trues into an array to be referenced in next step.  
   var selectedTypes = [];
   if (wantLower) {
     selectedTypes.push(randoLower);
@@ -61,35 +72,25 @@ function doPassword() {
     selectedTypes.push(randoSpecial);
   }
 
-  //added this bit to make sure user selects at least one
-  //character type. it works, but it broke everything under it. 
-  // if (selectedTypes.length == 0){
-  //   alert("at least one type must be selected");
-  //   window.confirm("include lowercase letters?");
-  //   window.confirm("include uppercase letters?");
-  //   window.confirm("include numbers?");
-  //   window.confirm("include special characters?");
-  // }
-
-    // for loop that actually produces the initial string of characters, iterates wantLength number
-    //of times through the array of functions created in previous step. 
-    var password = "";
-    var j = 0;
-    for (var i = 0; i < wantLength; i++) {
-      password += selectedTypes[j]();
-      j += 1;
-      if (j == selectedTypes.length) {
-        j = 0;
-      }
+  // for loop that actually produces the initial string of characters, iterates wantLength number
+  //of times through the array of functions created in previous step. 
+  var password = "";
+  var j = 0;
+  for (var i = 0; i < wantLength; i++) {
+    password += selectedTypes[j]();
+    j += 1;
+    if (j == selectedTypes.length) {
+      j = 0;
     }
-
-    //this method shuffles the string produced in previous loop
-    //sourced from https://stackoverflow.com/a/13365977
-    password = password.split('').sort(function () { return 0.5 - Math.random() }).join('');
-
-
-    //                          ✨ voila! ✨
-    //writes var password into text field id="password" in html page. 
-    document.getElementById("password").value = password;
-
   }
+
+  //this method shuffles the string produced in previous loop
+  //sourced from https://stackoverflow.com/a/13365977
+  password = password.split('').sort(function () { return 0.5 - Math.random() }).join('');
+
+
+  //                          ✨ voila! ✨
+  //writes var password into text field id="password" in html page. 
+  document.getElementById("password").value = password;
+
+}
