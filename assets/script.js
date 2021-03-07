@@ -1,3 +1,7 @@
+                //we must start everything off via button-click
+                //add event listener
+                // on click run, y'know, all of this 
+
 
 // random decimal(math.random), rounded down(math.floor), multiplied by number of letters 
 //in alphabet (*26) plus the start point of lowercase letters in browser character code
@@ -30,14 +34,14 @@ console.log(randoSpecial() + " i am a random special character");
 //here we invoke the pop-up input/ok/cancel box on the page prompting user for input on 
 //length and character types to use. these answers will be stored in memory, but not displayed. 
 //parseInt solution found at https://stackoverflow.com/a/15047174
-var wantLength = parseInt(prompt("enter password length (12-128 characters)"), 10);
+var wantLength = parseInt(prompt("enter password length (8-128 characters)"), 10);
 
 //this while loop makes sure the user enters valid number before continuing
 //number constraint solution found at stackoverflow.com/questions/59340866/random-password-generator-javascript-not-working
 //also added isNan stipulation because letters will register as booleans and break stuff 
 //isNaN solution found at https://stackoverflow.com/questions/15047140/javascript-prompt
 //-number-and-continue-prompting-if-answer-is-wrong
-while (isNaN(wantLength) || wantLength < 12 || wantLength > 128) {
+while (isNaN(wantLength) || wantLength < 8 || wantLength > 128) {
   wantLength = prompt("length must be between 12 and 128, please re-enter a valid length.");
 }
 //the rest of the character type options record ok/cancel as true/false booleans 
@@ -46,6 +50,13 @@ var wantUpper = window.confirm("include uppercase letters?");
 var wantNumber = window.confirm("include numbers?");
 var wantSpecial = window.confirm("include special characters?");
 
+                //***TO ENSURE USER INPUT TYPE SELECTION ACTUALLY HAPPENS***
+                // if wantLower wantUpper wantNumber wantSpecial != true 
+                // prompt("must select at least one character type")
+                //repeat prompt windows? 
+                //                        or? 
+                //perhaps could put after functions_we_actually_want_to_use? 
+                //if var=[array] --> re-prompts? 
 
 //checks wantLower/Upper/Number/Special boolean values and adds true values 
 //to an array which will iterate *wantLength number* times. 
