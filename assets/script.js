@@ -63,13 +63,13 @@ function doPassword() {
 
   //added this bit to make sure user selects at least one
   //character type. it works, but it broke everything under it. 
-  if (selectedTypes.length < == 0){
-    alert("at least one type must be selected");
-    window.confirm("include lowercase letters?");
-    window.confirm("include uppercase letters?");
-    window.confirm("include numbers?");
-    window.confirm("include special characters?");
-  }
+  // if (selectedTypes.length == 0){
+  //   alert("at least one type must be selected");
+  //   window.confirm("include lowercase letters?");
+  //   window.confirm("include uppercase letters?");
+  //   window.confirm("include numbers?");
+  //   window.confirm("include special characters?");
+  // }
 
     // for loop that actually produces the initial string of characters, iterates wantLength number
     //of times through the array of functions created in previous step. 
