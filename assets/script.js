@@ -44,14 +44,6 @@ var wantUpper = window.confirm("include uppercase letters?");
 var wantNumber = window.confirm("include numbers?");
 var wantSpecial = window.confirm("include special characters?");
 
-                //***TO ENSURE USER INPUT TYPE SELECTION ACTUALLY HAPPENS***
-                // if wantLower wantUpper wantNumber wantSpecial != true 
-                // prompt("must select at least one character type")
-                //repeat prompt windows? 
-                //                        or? 
-                //perhaps could put after functions_we_actually_want_to_use? 
-                //if var=[array] --> re-prompts? 
-
 //checks wantLower/Upper/Number/Special boolean values and adds true values 
 //to an array which will iterate *wantLength number* times. 
 var functions_we_actually_want_to_use = [];
@@ -67,6 +59,12 @@ if (wantNumber) {
 if (wantSpecial) {
   functions_we_actually_want_to_use.push(randoSpecial);
 }
+
+// if no true in array
+// alert "must select a type" 
+//   okay button to clear? 
+// window.prompt again for each
+//else 
 
 // for loop that actually produces the initial string of characters, iterates wantLength number
 //of times through the array of functions created in previous step. 
