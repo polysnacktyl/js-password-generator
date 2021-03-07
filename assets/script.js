@@ -1,4 +1,8 @@
-                //we must start everything off via button-click
+
+
+function doPassword() { 
+
+//we must start everything off via button-click
                 //add event listener
                 // on click run, y'know, all of this 
 
@@ -91,7 +95,12 @@ for (var i = 0; i < wantLength; i++) {
 password = password.split('').sort(function(){return 0.5-Math.random()}).join(''); 
 console.log(password);
 
+// document.getElementById("password").value = "";
 
 
+              //THEN WRITE VAR PASSWORD INTO TEXTFIELD ID "password"
+
+
+}
 
 
