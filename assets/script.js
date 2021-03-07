@@ -24,11 +24,6 @@ function randoSpecial() {
   return specials[Math.floor(Math.random() * specials.length)];
 }
 
-//console.loggin randoFunctions just to make sure they work 
-console.log(randoLower());
-console.log(randoUpper());
-console.log(randoNumber());
-console.log(randoSpecial() + " i am a random special character");
 
 //here we invoke the pop-up input/ok/cancel box on the page prompting user for input on 
 //length and character types to use. these answers will be stored in memory, but not displayed. 
@@ -36,7 +31,7 @@ console.log(randoSpecial() + " i am a random special character");
 var wantLength = parseInt(prompt("enter password length (8-128 characters)"), 10);
 
 //this while loop makes sure the user enters valid number before continuing
-//number constraint solution found at stackoverflow.com/questions/59340866/random-password-generator-javascript-not-working
+//constraint solution at stackoverflow.com/questions/59340866/random-password-generator-javascript-not-working
 //also added isNan stipulation because letters will register as booleans and break stuff 
 //isNaN solution found at https://stackoverflow.com/questions/15047140/javascript-prompt
 //-number-and-continue-prompting-if-answer-is-wrong
@@ -88,7 +83,6 @@ for (var i = 0; i < wantLength; i++) {
 //this method shuffles the string produced in previous loop
 //sourced from https://stackoverflow.com/a/13365977
 password = password.split('').sort(function(){return 0.5-Math.random()}).join(''); 
-console.log(password);
 
 
 //                          ✨ voila! ✨
