@@ -63,7 +63,7 @@ function doPassword() {
 
   //added this bit to make sure user selects at least one
   //character type. it works, but it broke everything under it. 
-  if (selectedTypes.length < === 0){
+  if (selectedTypes.length < == 0){
     alert("at least one type must be selected");
     window.confirm("include lowercase letters?");
     window.confirm("include uppercase letters?");
