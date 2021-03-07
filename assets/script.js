@@ -29,13 +29,13 @@ console.log(randoSpecial() + " i am a random special character");
 
 //here we invoke the pop-up input/ok/cancel box on the page prompting user for input on 
 //length and character types to use. these answers will be stored in memory, but not displayed. 
-//parseInt advice found at https://stackoverflow.com/a/15047174
+//parseInt solution found at https://stackoverflow.com/a/15047174
 var wantLength = parseInt(prompt("enter password length (12-128 characters)"), 10);
 
 //this while loop makes sure the user enters valid number before continuing
-//found at stackoverflow.com/questions/59340866/random-password-generator-javascript-not-working
+//number constraint solution found at stackoverflow.com/questions/59340866/random-password-generator-javascript-not-working
 //also added isNan stipulation because letters will register as booleans and break stuff 
-//isNaN advice found at https://stackoverflow.com/questions/15047140/javascript-prompt
+//isNaN solution found at https://stackoverflow.com/questions/15047140/javascript-prompt
 //-number-and-continue-prompting-if-answer-is-wrong
 while (isNaN(wantLength) || wantLength < 12 || wantLength > 128) {
   wantLength = prompt("length must be between 12 and 128, please re-enter a valid length.");
@@ -63,10 +63,10 @@ if (wantSpecial) {
   functions_we_actually_want_to_use.push(randoSpecial);
 }
 
-// the loop that actually produces the initial string of characters 
+// for loop that actually produces the initial string of characters, iterates wantLength number
+//of times through the array of functions created in previous step. 
 var password = "";
 var j = 0;
-// Do a loop for each character we want to generate, from 0 to the value of wantLength
 for (var i = 0; i < wantLength; i++) {
   password += functions_we_actually_want_to_use[j]();
   j += 1;
@@ -75,7 +75,7 @@ for (var i = 0; i < wantLength; i++) {
   }
 }
 
-//this function shuffles string produced in previous loop
+//this method shuffles the string produced in previous loop
 //sourced from https://stackoverflow.com/a/13365977
 password = password.split('').sort(function(){return 0.5-Math.random()}).join(''); 
 console.log(password);
