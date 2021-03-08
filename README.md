@@ -13,7 +13,6 @@ Users can:
 ## Installation
 ...instructions for installing this application...
 
-
 ## Usage 
 <ol>
 <li>click generate button to start application</li>
@@ -35,7 +34,6 @@ Solution for shuffling the generated string of characters provided by [Joel Mell
 Function code for random character generation originally provided by [Florin Pop](https://codepen.io/FlorinPop17), viewable on his [his CodePen](https://codepen.io/FlorinPop17/pen/BaBePej) and demonstrated by [Brad Traverysy of Traversy Media](https://traversymedia.com/) in [this YouTube video](https://www.youtube.com/watch?v=duNmhKgtcsI&t=914s)
 
 ## license
-
 
 ## contribute 
 
