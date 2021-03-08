@@ -1,14 +1,19 @@
 # <Javascript Password Generator>
 
 ## Description
-This application generates a randomized string of characters based on input from a user. 
+This application generates a randomized string of characters based on input from a user.
 
 ## Features 
-Users can: 
+ Users are prompted to choose: 
     <ul>
-    <li>set length within a provided range</li>
-    <li>select 1-4 character types to include</li> 
+    <li>desired password length within a provided range</li>
+    <li>whether or not to include lowercase letters</li> 
+    <li>whether or not to include include uppercase letters</li> 
+    <li>iwhether or not to include nclude numbers</li> 
+    <li>whether or not to include include special characters</li> 
     </ul>
+The script also ensures input for desired length is a number in the provided range and that at least one character type is selected. As the initial characters of the password show a uniform pattern as a product of the for loop, a shuffling method is then applied for a truly random string. 
+
 
 ## Installation
 This Javascript application runs in-browser; its code can be cloned by pasting the following into your command line: 
