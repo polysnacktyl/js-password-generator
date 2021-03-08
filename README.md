@@ -22,10 +22,10 @@ Users can:
 <li>generated password will appear in the text field on the page </li>
 <li>select and copy </li>
 </ol>
-![image](/assets/images/length.png)
-![image](/assets/images/types.png)
 
-
+setting length | choosing character type
+------------ | -------------
+![image](/assets/images/length.png)| ![image](/assets/images/types.png)
 
 ## Credits
 Solution for preventing non-number input for length provided by [Rob M.](https://stackoverflow.com/users/693275/rob-m) in [this Stack Overflow thread](https://stackoverflow.com/questions/15047140/javascript-prompt-number-and-continue-prompting-if-answer-is-wrong)
