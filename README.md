@@ -59,5 +59,5 @@ Go the extra mile and write tests for your application. Then provide examples on
 Quality of passwords produced by this generator were [tested for stregth](https://www.comparitech.com/privacy-security-tools/password-strength-test/). As expected, when users choose longer passwords with multiple character types, strong passwords are produced. 
 
     ```md
-    ![image](https://github.com/polysnacktyl/js-password-generator/blob/main/assets/images/copy.png?raw=true)
+    <img src="/assets/images/test.png" alt="test" /> 
     ```
