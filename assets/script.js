@@ -97,3 +97,6 @@ function doPassword() {
 
 }
 
+function copyPassword() {
+  
+}
