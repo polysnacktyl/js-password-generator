@@ -11,7 +11,8 @@ Users can:
     </ul>
 
 ## Installation
-...instructions for installing this application...
+This Javascript application runs in-browser; its code can be cloned by pasting the following into your command line: 
+```git clone https://github.com/polysnacktyl/js-password-generator.git```
 
 ## Usage 
 <ol>
@@ -33,9 +34,8 @@ Solution for shuffling the generated string of characters provided by [Joel Mell
 
 Function code for random character generation originally provided by [Florin Pop](https://codepen.io/FlorinPop17), viewable on his [his CodePen](https://codepen.io/FlorinPop17/pen/BaBePej) and demonstrated by [Brad Traverysy](https://traversymedia.com/) in [this YouTube video](https://www.youtube.com/watch?v=duNmhKgtcsI&t=914s)
 
-## license
-
-## contribute 
+## Contributions
+For questions or contributions to this project, contact polysnacktyl@gmail.com
 
 ## Testing
 Quality of passwords produced by this generator were [tested for stregth](https://www.comparitech.com/privacy-security-tools/password-strength-test/). As expected, when users choose longer passwords with multiple character types, strong passwords are produced. 
