@@ -1,4 +1,4 @@
-# <Javascript Password Generator>
+# [Javascript Password Generator](https://polysnacktyl.github.io/js-password-generator/)
 
 ## Description
 This application generates a randomized string of characters based on input from a user.
